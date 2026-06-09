@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coaches Curve — AI Orchestrator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="bg-orbs" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <div class="app">
+    <header class="header animate-in">
+      <div class="brand">
+        <div class="brand-icon" aria-hidden="true">
+          <svg viewBox="0 0 40 40" fill="none">
+            <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
+            <path d="M12 26c2-6 6-10 8-10s6 4 8 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="20" cy="14" r="3" fill="currentColor"/>
+          </svg>
+        </div>
+        <div class="header-text">
+          <p class="eyebrow">CEO's Little Helpers · Prototype</p>
+          <h1>Coaches Curve <span class="title-accent">Orchestrator</span></h1>
+          <p class="subtitle">From expert labor to asset owner — powered by your business knowledge base.</p>
+        </div>
+      </div>
+      <div class="header-meta">
+        <div class="badge badge-live">
+          <span class="pulse-dot"></span>
+          Live Demo
+        </div>
+        <div class="stat-pills">
+          <span class="stat-pill" id="stat-docs">6 docs</span>
+          <span class="stat-pill" id="stat-model">groq</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="examples animate-in delay-1" id="examples">
+      <p class="examples-label">Quick actions</p>
+      <div class="chip-row">
+        <button class="chip" data-prompt="Who is the ideal client for Curve Concierge?" data-icon="target">
+          <span class="chip-icon">◎</span>
+          Ideal client
+        </button>
+        <button class="chip" data-prompt="What is non-transferable expertise?" data-icon="core">
+          <span class="chip-icon">◈</span>
+          Core problem
+        </button>
+        <button class="chip chip-featured" data-prompt="Prep me for a call with Christine, a business coach in Copenhagen who struggles to explain what makes her work different." data-icon="brief">
+          <span class="chip-icon">✦</span>
+          Lead prep brief
+        </button>
+      </div>
+    </section>
+
+    <main class="chat-panel animate-in delay-2">
+      <div class="chat-panel-header">
+        <div class="agent-status">
+          <div class="avatar avatar-bot avatar-sm">
+            <span>CC</span>
+            <span class="avatar-ring"></span>
+          </div>
+          <div>
+            <span class="agent-name">Curve Agent</span>
+            <span class="agent-role">Orchestrator · Online</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="chat" id="chat" aria-live="polite">
+        <div class="message bot" data-initial>
+          <div class="avatar avatar-bot"><span>CC</span></div>
+          <div class="bubble">
+            <p>Welcome — I'm the <strong>Coaches Curve orchestrator</strong> prototype.</p>
+            <p>I pull from your C.O.A.C.H.E.S. knowledge base to answer questions and prepare strategy session briefs. Try a quick action above, or ask anything below.</p>
+          </div>
+        </div>
+      </div>
+
+      <form class="composer" id="form">
+        <input
+          type="text"
+          id="password"
+          class="password-input hidden"
+          placeholder="Demo password (if required)"
+          autocomplete="off"
+        />
+        <div class="composer-inner">
+          <div class="avatar avatar-user avatar-sm composer-avatar"><span>You</span></div>
+          <textarea
+            id="input"
+            rows="1"
+            placeholder="Ask a question or type: Prep me for a call with..."
+            required
+          ></textarea>
+          <button type="submit" id="send" aria-label="Send message">
+            <svg class="send-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M22 2L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            </svg>
+            <span id="send-label" class="send-label">Send</span>
+          </button>
+        </div>
+      </form>
+    </main>
+
+    <footer class="footer animate-in delay-3">
+      <div class="stack-flow">
+        <span class="stack-tag">Prototype</span>
+        <span class="stack-arrow">→</span>
+        <span class="stack-tag stack-future">Claude · GBrain · Manus · n8n</span>
+      </div>
+      <span id="status" class="status-text"></span>
+    </footer>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
