@@ -91,6 +91,8 @@ See [docs/PRODUCTION_MIGRATION.md](docs/PRODUCTION_MIGRATION.md) for the full up
 
 ## Documentation
 
+- [**PROJECT CONTEXT (master LLM brief)**](docs/PROJECT_CONTEXT.md) — feed this to any LLM with no chat memory
+- [Client Handoff](docs/CLIENT_HANDOFF.md)
 - [Setup Guide](docs/SETUP.md)
 - [Architecture](docs/ARCHITECTURE.md)
 - [Production Migration](docs/PRODUCTION_MIGRATION.md)
